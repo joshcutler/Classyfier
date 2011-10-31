@@ -64,9 +64,6 @@ module Classyfier
             posteriors[category] = likelihood * prior / marginal
           end
           
-          puts odds.inspect
-          puts posteriors.inspect
-          
           return posteriors
         end
         

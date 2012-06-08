@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Josh Cutler"]
   s.email       = ["josh@codepresencelabs.com"]
   s.homepage    = ""
-  s.summary     = %q{Simple Naive Bayesian Classifier}
-  s.description = %q{Simple Naive Bayesian Classifier}
+  s.summary     = %q{Simple Ruby Classifier Utilities}
+  s.description = %q{Simple Ruby Classifier Utilities}
 
   s.rubyforge_project = "classyfier"
 

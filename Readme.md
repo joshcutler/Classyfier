@@ -1,3 +1,3 @@
-h2. Testing
+# Testing
 
 To run tests just run: ```rake test```

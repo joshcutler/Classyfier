@@ -8,12 +8,14 @@ module Classyfier
         @english_dict = load_dictionary()
       end
       
-      def classify(text)
+      def classify(text, opts = {:word_count => 1})
         words = text.split(" ")
+        count = 0
         for word in words
-          return true if @english_dict[clean_word(word)]
+          count += 1 if @english_dict[clean_word(word)]
+          break if count >= opts[:word_count]
         end
-        return false
+        return count >= opts[:word_count]
       end
     
       protected

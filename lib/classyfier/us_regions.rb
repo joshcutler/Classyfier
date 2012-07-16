@@ -106,7 +106,7 @@ module Classyfier
         end
         
         unless !opts[:text]
-          chunks = opts[:text].split(" ")
+          chunks = opts[:text].split(/[,\s]/)
           for word in chunks
             cleanword = clean_word(word.downcase)
             
@@ -116,6 +116,8 @@ module Classyfier
             return @codes[state] if state
           end
         end
+        
+        return nil
       end
       
       protected

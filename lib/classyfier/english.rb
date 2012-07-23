@@ -11,6 +11,7 @@ module Classyfier
       def classify(text, opts = {:word_count => 1, :word_size => 1})
         words = text.split(" ")
         count = 0
+        opts[:word_size] ||= 1
         for word in words
           next if word.length < opts[:word_size]
           count += 1 if @english_dict[clean_word(word)]
